@@ -136,7 +136,7 @@ typedef struct {
 typedef struct {
     /* 0x0000 */ u16 unk_000;
     /* 0x0002 */ s16 unk_002;
-    /* 0x0004 */ s16 unk_004; // currentPosition
+    /* 0x0004 */ s16 currentPosition;
     /* 0x0006 */ s16 unk_006;
     /* 0x0008 */ s16 unk_008; // lapCount?
     /* 0x000A */ char unk_00A[0x2];

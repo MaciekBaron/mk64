@@ -1378,15 +1378,15 @@ s32 func_8007223C(?); // extern
 f32 func_8008933C(Player *, s32, s32, s32); // extern
 ? func_800C9060(u8, s32); // extern
 
-void func_80089474(s32 arg0, u8 arg1, s32 arg2, s32 arg3, s32 arg4) {
-    Player *sp18;
+void func_80089474(s32 arg0, u8 playerIndex, s32 arg2, s32 arg3, s32 arg4) {
+    Player *player;
 
-    sp18 = &gPlayerOne[arg1];
+    player = &gPlayerOne[playerIndex];
     if (func_8007223C(0x4000000) != 0) {
         func_80072180();
     }
-    if ((func_8008933C(sp18, arg0, arg2, arg3) >= 4.0) && ((sp18->unk_000 & 0x1000) != 0x1000)) {
-        func_800C9060(arg1, arg4);
+    if ((func_8008933C(player, arg0, arg2, arg3) >= 4.0) && ((player->unk_000 & PLAYER_CPU) != PLAYER_CPU)) {
+        func_800C9060(playerIndex, arg4);
     }
 }
 #else

@@ -473,7 +473,7 @@ void func_800B0350(void) {
     if (D_800E86A4 == 0) {
         phi_s0 = 0;
         do {
-            if ((func_800B4520() == 0) && (gEnableDebugMode != 0) && ((gControllers[phi_s0].buttonPressed & 0x1000) != 0)) {
+            if ((func_800B4520() == 0) && (gEnableDebugMode != 0) && ((gControllers[phi_s0].buttonPressed & START_BUTTON) != 0)) {
                 temp_v0 = gMenuSelection;
                 if ((temp_v0 != MAIN_MENU) && (temp_v0 != PLAYER_SELECT_MENU)) {
                     if (temp_v0 == COURSE_SELECT_MENU) {

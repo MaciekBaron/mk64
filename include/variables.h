@@ -78,7 +78,7 @@ extern Player* gPlayerOneCopy;
 extern u16 D_800DC51C;
 extern s8 gDebugMenuSelection; //D_8018EDEF
 extern s32 D_80164A28;
-extern s32 D_801643B8[];
+extern s32 gPlayerPositions[]; // D_801643B8
 extern s16 D_8016556E;
 extern s32 D_80162DE0;
 extern s32 D_80162DE4;

@@ -3270,10 +3270,10 @@ void func_8002D268(Player *player, s32 arg1, s8 arg2, s8 arg3) {
             phi_v1 = temp_v1_2;
             if ((temp_v1_2 == 0x4000) && ((player->unk_0BC & 0x100000) == 0x100000) && ((temp_v0_8 & 0x100) != 0x100)) {
                 func_800C9060(arg3, 0x1900A60A);
-                phi_v1 = player->unk_000 & 0x4000;
-            } else if ((temp_v1_2 == 0x4000) && ((temp_v0_8 & 0x100) != 0x100)) {
+                phi_v1 = player->unk_000 & PLAYER_HUMAN;
+            } else if ((temp_v1_2 == 0x4000) && ((temp_v0_8 & PLAYER_INVISIBLE_OR_BOMB) != 0x100)) {
                 func_800CADD0(arg3, player->unk_0C2 / 35.0f);
-                phi_v1 = player->unk_000 & 0x4000;
+                phi_v1 = player->unk_000 & PLAYER_HUMAN;
             }
             if (phi_v1 == 0x4000) {
                 player->unk_044 |= 0x100;
@@ -3282,13 +3282,13 @@ void func_8002D268(Player *player, s32 arg1, s8 arg2, s8 arg3) {
         temp_v0_9 = player->unk_0C2;
         if ((temp_v0_9 < 0x23) && (temp_v0_9 >= 0x1C) && (((player->unk_094 / 18.0f) * 216.0f) >= 20.0f)) {
             temp_v0_10 = player->unk_000;
-            temp_v1_3 = temp_v0_10 & 0x4000;
+            temp_v1_3 = temp_v0_10 & PLAYER_HUMAN;
             player->unk_DCC = 0;
             player->unk_DC0 = D_800ED838;
             phi_v1_2 = temp_v1_3;
-            if ((temp_v1_3 == 0x4000) && ((temp_v0_10 & 0x100) != 0x100)) {
+            if ((temp_v1_3 == PLAYER_HUMAN) && ((temp_v0_10 & 0x100) != 0x100)) {
                 func_800CADD0(arg3, player->unk_0C2 / 35.0f);
-                phi_v1_2 = player->unk_000 & 0x4000;
+                phi_v1_2 = player->unk_000 & PLAYER_HUMAN;
             }
             if (phi_v1_2 == 0x4000) {
                 player->unk_044 |= 0x100;
@@ -3299,7 +3299,7 @@ void func_8002D268(Player *player, s32 arg1, s8 arg2, s8 arg3) {
             temp_v0_12 = player->unk_000;
             player->unk_DCC = 0;
             player->unk_DC0 = 1.5f;
-            if (((temp_v0_12 & 0x4000) == 0x4000) && ((temp_v0_12 & 0x100) != 0x100)) {
+            if (((temp_v0_12 & PLAYER_HUMAN) == PLAYER_HUMAN) && ((temp_v0_12 & PLAYER_INVISIBLE_OR_BOMB) != PLAYER_INVISIBLE_OR_BOMB)) {
                 temp_v0_13 = player->unk_0C2;
                 if ((temp_v0_13 < 0xB) && (temp_v0_13 >= 4) && (gCurrentCourseId == 2)) {
                     func_800CADD0(arg3, temp_v0_13 / 14.0f);
