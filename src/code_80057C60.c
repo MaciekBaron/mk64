@@ -20,7 +20,7 @@ extern struct UnkStruct_800DC5EC *D_800DC5F0;
 extern struct UnkStruct_800DC5EC *D_800DC5F4;
 extern struct UnkStruct_800DC5EC *D_800DC5F8;
 extern s32 D_8018D21C;
-extern s16 gPlayerBalloonStatus[8][3]; // 0x8018D5F0
+extern u16 gPlayerBalloonStatus[8][3]; // 0x8018D5F0
 extern s16 gPlayerBalloonCount[];
 
 // UI Code?
