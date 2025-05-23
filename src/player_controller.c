@@ -3694,7 +3694,8 @@ void func_800332E8(Player* player, s32 playerIndex) {
     if (((player->topSpeed * 0.8) <= D_80165280[playerIndex]) && (D_80165280[playerIndex] < (player->topSpeed * 0.9))) {
         D_80165280[playerIndex] += gKartAccelerationTables[player->characterId][8] * 2.8;
     }
-    if (((player->topSpeed * 0.9) <= D_80165280[playerIndex]) && (D_80165280[playerIndex] <= (player->topSpeed * 1.0))) {
+    if (((player->topSpeed * 0.9) <= D_80165280[playerIndex]) &&
+        (D_80165280[playerIndex] <= (player->topSpeed * 1.0))) {
         D_80165280[playerIndex] += gKartAccelerationTables[player->characterId][9] * 2.8;
     }
     player->unk_044 |= 0x20;
@@ -4606,7 +4607,7 @@ void handle_a_press_for_player_during_race(Player* player, struct Controller* co
                 func_80037CFC(player, controller, arg2);
             }
             D_80164A89 = 1;
-        // If start sequence and unknown condition
+            // If start sequence and unknown condition
         } else if (D_8018D168 == 1) {
             if (D_801656F0 == 1) {
                 if (D_801652E0[arg2] == 0) {
@@ -4623,8 +4624,7 @@ void handle_a_press_for_player_during_race(Player* player, struct Controller* co
 }
 
 void handle_a_press_for_all_players_during_race(void) {
-    u16 temp_v0_3
-    u16 temp_v0_4;
+    u16 temp_v0_3 u16 temp_v0_4;
     u16 temp_v0_5;
     u16 temp_v0_6;
 

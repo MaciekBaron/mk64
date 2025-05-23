@@ -982,7 +982,8 @@ void func_8008E4A4(Player* player, s8 playerIndex) {
                 if (gModeSelection == BATTLE) {
                     remove_battle_balloon_from_player(player, playerIndex);
                 }
-                if ((gIsPlayerTripleAButtonCombo[playerIndex] == true) && ((player->type & PLAYER_HUMAN) == PLAYER_HUMAN)) {
+                if ((gIsPlayerTripleAButtonCombo[playerIndex] == true) &&
+                    ((player->type & PLAYER_HUMAN) == PLAYER_HUMAN)) {
                     player->currentSpeed += 100.0f;
                 }
 
@@ -1089,7 +1090,8 @@ void apply_hit_by_item_effect(Player* player, s8 playerIndex) {
                 D_80165190[2][playerIndex] = 1;
                 D_80165190[3][playerIndex] = 1;
                 player->unk_042 = 0;
-                if ((gIsPlayerTripleAButtonCombo[playerIndex] == true) && ((player->type & PLAYER_HUMAN) == PLAYER_HUMAN)) {
+                if ((gIsPlayerTripleAButtonCombo[playerIndex] == true) &&
+                    ((player->type & PLAYER_HUMAN) == PLAYER_HUMAN)) {
                     player->currentSpeed += 100.0f;
                 }
 
